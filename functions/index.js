@@ -52,10 +52,10 @@ exports.convertLyrx = functions.https.onRequest((request, response) => {
             const geoserverUrl = 'https://geoserver225-ffmu3lsepa-uc.a.run.app/geoserver/web'; // Replace with your GeoServer URL
             // Retrieve secrets from Google Cloud Secret Manager
             const geoserverUsername = await accessSecret(
-                'projects/<YOUR_PROJECT_ID>/secrets/GEOSERVER_USERNAME/versions/latest',
+                'projects/ut-dnr-ugs-styling-prod/secrets/GEOSERVER_USERNAME/versions/latest',
               );
               const geoserverPassword = await accessSecret(
-                'projects/<YOUR_PROJECT_ID>/secrets/GEOSERVER_PASSWORD/versions/latest',
+                'projects/ut-dnr-ugs-styling-prod/secrets/GEOSERVER_PASSWORD/versions/latest',
               );
             const layerName = request.body.layerName; // Get layerName
             const sldName = request.body.sldName;     // Get sldName
